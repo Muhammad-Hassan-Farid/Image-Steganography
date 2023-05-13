@@ -10,7 +10,7 @@ root=Tk()
 root.title("Steganography - Hide a Screte Text Message in an Image")
 root.geometry("700x500+150+180")
 root.resizable(False,False)
-root.configure(bg='#2f4155')
+root.configure(bg='#6e7070')
 
 def showimage():
     global filename
@@ -37,17 +37,17 @@ def Show():
     text1.insert(END, clear_message)
     
 def save():
-    secret.save("hide.png")
+    secret.save("hidden.png")
 
 #icon
-image_icon=PhotoImage(file='logo.jpg')
+image_icon=PhotoImage(file='icon.png')
 root.iconphoto(False,image_icon)
 
 #logo
-logo=PhotoImage(file="logo.png")
-Label(root,image=logo,bg="#2f4155").place(x=10,y=0)
+logo=PhotoImage(file="Logo2.png")
+Label(root,image=logo,bg="#6e7070").place(x=10,y=13)
 
-Label(root,text="CYBER SCIENCE",bg="#2d4155",fg="white",font="arial 25 bold").place(x=100,y=20)
+Label(root,text="Image Steganography",bg="#6e7070",fg="white",font="arial 25 bold").place(x=70,y=20)
 
 #first Frame
 f = Frame(root,bd=3,bg="black",width="340",height=280,relief=GROOVE)
@@ -71,20 +71,20 @@ scrollbar1.configure(command=text1.yview)
 text1.configure(yscrollcommand=scrollbar1.set)
 
 #third frame
-frame3=Frame(root,bd=3,bg="#2f4155",width=330,height=100,relief=GROOVE)
+frame3=Frame(root,bd=3,bg="#6e7070",width=330,height=100,relief=GROOVE)
 frame3.place(x=10,y=370)
 
 Button(frame3,text="Open Image",width=10,height=2,font="arail 14 bold",command=showimage).place(x=20,y=30)
 Button(frame3,text="Save Image",width=10,height=2,font="arail 14 bold",command=save).place(x=180,y=30)
-Label(frame3,text="Picture, Image, Photo File",bg="#2f4155",fg='yellow').place(x=20,y=5)
+Label(frame3,text="Picture, Image, Photo File",bg="#6e7070",fg='yellow').place(x=20,y=5)
 
 #Fourth Frame
-frame4=Frame(root,bd=3,bg="#2f4155",width=330,height=100,relief=GROOVE)
+frame4=Frame(root,bd=3,bg="#6e7070",width=330,height=100,relief=GROOVE)
 frame4.place(x=360,y=370)
 
 Button(frame4,text="Hide Image",width=10,height=2,font="arail 14 bold",command=Hide).place(x=20,y=30)
 Button(frame4,text="Show Image",width=10,height=2,font="arail 14 bold",command=Show).place(x=180,y=30)
-Label(frame4,text="Picture, Image, Photo File",bg="#2f4155",fg='yellow').place(x=20,y=5)
+Label(frame4,text="Picture, Image, Photo File",bg="#6e7070",fg='yellow').place(x=20,y=5)
 
 
 root.mainloop()

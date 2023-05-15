@@ -57,7 +57,6 @@ lb1 = Label(f,bg="black")
 lb1.place(x=40,y=10)
 
 #second frame
-
 frame2 = Frame(root,bd=3,width=340,height=280,bg="white",relief=GROOVE)
 frame2.place(x=350,y=80)
 

@@ -12,7 +12,7 @@ root.geometry("700x500+400+180")
 root.resizable(False,False)
 root.configure(bg='skyblue')
 
-
+# open image function
 def showimage():
     global filename
     filename=filedialog.askopenfilename(initialfile=os.getcwd(),
@@ -26,17 +26,19 @@ def showimage():
     lb1.configure(image=img,width=250,height=250)
     lb1.image=img
     
-    
+# Hide Text function  
 def Hide():
     global secret
     message=text1.get(1.0,END)
     secret = lsb.hide(str(filename), message)
-    
+   
+# Show image function
 def Show():
     clear_message = lsb.reveal(filename)
     text1.delete(1.0,END)
     text1.insert(END, clear_message)
-    
+   
+# Save image fuction 
 def save():
     secret.save("hidden.png")
 

@@ -8,9 +8,10 @@ from stegano import lsb
 root=Tk()
 
 root.title("Steganography - Hide a Screte Text Message in an Image")
-root.geometry("700x500+150+180")
+root.geometry("700x500+400+180")
 root.resizable(False,False)
 root.configure(bg='skyblue')
+
 
 def showimage():
     global filename
